@@ -4,7 +4,10 @@ var server = net.createServer(function(client) {
     client.setTimeout(500);
     client.setEncoding('utf8');
     client.on('data', function(data) {
-        writeData(client, 'Sending: ' + data.toString());
+        sData = data.split("|")
+        user=sData[0]
+        mess=sData[1]
+        writeData(client, 'Sending: Nice to meet you ' + user);
     });
 
     client.on('end', function() {
