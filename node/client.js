@@ -1,19 +1,29 @@
 var net = require('net');
 function getConnection(connName){
-var client = net.connect({port: 8107, host:'172.28.94.218'}, function() {
-this.setTimeout(500);
-this.setEncoding('utf8');
-this.on('data', function(data) {
-this.end();
-});
-this.on('end', function() {
-});
-this.on('error', function(err) {
-});
-this.on('timeout', function() {
-});
-this.on('close', function() {
-});
+    var client = net.connect({port: 8107, host:'172.17.179.181'}, function() {
+    console.log(connName);
+        this.setTimeout(500);//ms
+    this.setEncoding('utf8');
+    this.on('data', function(data) {
+        console.log(data);
+    this.end();
+    });
+
+    this.on('end', () => {
+        //익명함수의 새로운 방식
+    });
+
+    this.on('error', function(err) {
+        console.log(err);
+    });
+
+    this.on('timeout', function(to) {
+        
+    });
+
+    this.on('close', function() {
+    });
+
 });
 return client;
 }

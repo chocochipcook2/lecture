@@ -1,5 +1,6 @@
 var net = require('net');
 var server = net.createServer(function(client) {
+console.log("good")
 client.setTimeout(500);
 client.setEncoding('utf8');
 client.on('data', function(data) {
@@ -15,6 +16,7 @@ client.on('timeout', function() {
 });
 });
 server.listen(8107, function() {
+    console.log("listen,8107")
     server.on('close', function(){
     });
     server.on('error', function(err){
