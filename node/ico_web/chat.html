@@ -1,6 +1,6 @@
 <!DOCTYPE html><html><head>
     <title>Socketio chat</title>
-    <script src="http://3.36.174.220/socket.io/socket.io.js"></script>
+    <script src="http://jsy2.securekim.com/socket.io/socket.io.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     </head>
     <body>
@@ -8,7 +8,7 @@
     <input type="text" id="user"><input type="button" value="msg submit" onclick="myOnClick()">
     </body>
     <script>
-    var socket = io.connect('http://3.36.174.220');
+    var socket = io.connect('http://jsy2.securekim.com');
     socket.emit('joinRoom', {roomName: 'myroom'});
     socket.on('recMsg', function (data) {
     console.log(data.comment)
