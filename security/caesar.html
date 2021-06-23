@@ -1,0 +1,19 @@
+<p id="ad"></p>
+<script>
+alphabet="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+key=3
+decryp=""
+str=prompt("암호화할 문장")
+crypt=str.split(" ")
+for (i=0;i<crypt.length;i++){
+    for (j=0;j<crypt[i].length;j++){
+        indx=alphabet.indexOf(crypt[i][j])%(alphabet.length+key)+key
+        decryp+=alphabet[indx]
+    }
+} 
+let p=document.getElementById("ad")
+console.log(decryp); 
+
+</script>
+
+        
