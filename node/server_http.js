@@ -8,7 +8,7 @@ bodyParser = require ("body-parser")
 var server = http.createServer(app);
 server.listen(80);
 
-app.use(express.static(__dirname + '/ico_web'));
+app.use(express.static(__dirname + '/web'));
 app.use(bodyParser.json());
 
 app.get('/', function(req, res) {
